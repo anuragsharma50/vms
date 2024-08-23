@@ -7,10 +7,7 @@ const url = process.env.DB_URL;
 
 export const connectUsingMongoose = async () => {
     try{
-        await mongoose.connect(`${url}/vms`, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        })
+        await mongoose.connect(`${url}/vms`)
         console.log("MongoDB connection established");
     } catch(err) {
         console.log(err);
